@@ -20,12 +20,15 @@ public class Main {
             System.out.println("You entered nothing, so no output to display.");
         }
         else if (wordLen == 1) {
-/           //handle case of single letter
-            System.out.println("You en");
+            //handle special case of single letter
+            System.out.println("You entered \"" + input + "\", so the output is:\n" + input);
         }
         else {
             //get number of spaces for middle lines
             spaces = " ".repeat(wordLen - 2);
+
+            //print message for output
+            System.out.println("You entered \"" + input + "\", so the output is:");
 
             //main loop to print to console line by line
             for (int i=0, j=wordLen-1; i < wordLen; i++, j--) {
@@ -38,6 +41,7 @@ public class Main {
                     for (int k=wordLen-1; k >= 0; k--) {
                         System.out.print(input.charAt(k));
                     }
+                    System.out.print("\n");
                 }
                 else {
                     //on any other line print letter, then spaces, then opposite
