@@ -1,7 +1,6 @@
 package com.jacob.wordwrap;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Main {
 
@@ -28,7 +27,9 @@ public class Main {
         for (int i=0, j=wordLen-1; i < wordLen; i++, j--) {
             //first fill the row with spaces if not on first or last row
             if (j != 0) {
-                Arrays.fill(wrapArr[i], ' ');
+                for (char c : wrapArr[i]) {
+                    c = ' ';
+                }
             }
 
             //now fill the first and last column with the correct letter
