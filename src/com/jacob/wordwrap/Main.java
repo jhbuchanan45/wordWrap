@@ -10,7 +10,7 @@ public class Main {
         String input;
         String spaces;
 
-        System.out.println("Enter a single word");
+        System.out.print("Enter a single word: ");
         //get user input
         input = scanner.nextLine();
         wordLen = input.length();
